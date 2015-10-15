@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="jquery-inline-affirm.css">
+    <style>
+        body {
+            font-family: arial;
+        }
+        h4 {
+            background-color: #eeeeee;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 32px;
+            margin: 26px 0 9px;
+            padding: 0 14px;
+        }
+        .content {
+            margin: auto auto;
+            padding: 0;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>jQuery Inline Affirm</h1>
+    <p>
+        Provides an inline call to action and confirmation without having to mess with dialogs. It includes 3 styles: button, dark and light but can be styled easily.
+    </p>
+
+    <h4>Button Style</h4>
+    <div class="affirm button" data-id="1111" data-title="Save" data-question="Save this document?"></div>
+    <h4>Dark Style</h4>
+    <div class="affirm dark" data-id="1112" data-title="Save" data-question="Save this document?"></div>
+    <h4>Light Style</h4>
+    <div class="affirm light" data-id="1113" data-title="Save" data-question="Save this document?"></div>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="jquery-inline-affirm.js"></script>
+<script>
+
+    $(".affirm").inlineAffirm({
+        callback : function(ele){
+            console.log( $(ele).attr("data-id" ));
+        }
+    });
+
+
+</script>
+</body>
+</html>
