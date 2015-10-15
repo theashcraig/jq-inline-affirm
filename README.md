@@ -10,7 +10,7 @@ html : create a div element with the class "affirm" and style with "light", "dar
 
 EXAMPLE 
 
-<div class="affirm button" data-id="1111" data-title="Save" data-question="Save this document?"></div>
+<pre><div class="affirm button" data-id="1111" data-title="Save" data-question="Save this document?"></div></pre>
 
 - data-id : a unique id for the created element
 - data-title : the title of the affirm link
