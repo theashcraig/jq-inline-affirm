@@ -10,7 +10,7 @@ html : create a div element with the class "affirm" and style with "light", "dar
 
 EXAMPLE 
 
-<code><div class="affirm button" data-id="1111" data-title="Save" data-question="Save this document?"></div></code>
+	<div class="affirm button" data-id="1111" data-title="Save" data-question="Save this document?"></div>
 
 - data-id : a unique id for the created element
 - data-title : the title of the affirm link
@@ -19,10 +19,11 @@ EXAMPLE
 
 jQuery :
 
-$(".affirm").inlineAffirm({
-	callback : function(ele){
+	$(".affirm").inlineAffirm({
+		callback : function(ele){
 		console.log( $(ele).attr("data-id" ));
-	}
-});
+		}
+	});
+
 
 
